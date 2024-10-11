@@ -1,0 +1,33 @@
+.category-chart-container {
+  background-image: linear-gradient(to right, rgb(91, 166, 91), rgba(141, 186, 78, 0.033));
+  border: none;
+  font-family: 'Bree Serif', "Times New Roman", Times, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .category-chart-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .category-chart-container {
+    padding: 30px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-chart-container {
+    padding: 8px;
+    width: 100%;
+  }
+}

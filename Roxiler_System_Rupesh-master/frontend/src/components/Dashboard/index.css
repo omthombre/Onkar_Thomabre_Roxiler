@@ -1,0 +1,249 @@
+/* Dashboard Container */
+.dashboard-container {
+  background-image: linear-gradient(to right, rgb(180, 117, 152), rgb(124, 39, 235));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  background-image: linear-gradient(to bottom, rgb(143, 6, 202), rgba(94, 238, 224, 0.795));
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* Dashboard Title */
+.dashboard-title {
+  padding: 14px;
+  color: rgb(0, 0, 0);
+  background: rgba(233, 222, 222, 0.596);
+  text-align: center;
+  box-shadow: 0px 0px 16px 5px;
+  border-radius: 10px;
+  font-family: sans-serif;
+  font-size: 24px; /* Start with mobile size */
+}
+
+/* Input Section */
+.input-section {
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column; /* Stack for mobile */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: black 2px 2px 5px;
+}
+
+/* Input Container */
+.input-container {
+  background-color: rgb(180, 193, 207);
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: black 2px 2px 10px;
+}
+
+/* Search Input */
+.search-input {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+/* Transactions Section */
+.transactions-section {
+  border: 0px solid red; /* Change this if needed */
+  height: 300px;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Transaction Table */
+.transaction-table {
+  border-collapse: collapse;
+  font-family: 'Bree Serif', 'Times New Roman', Times, serif;
+  border-radius: 10px;
+  width: 100%; 
+  background: linear-gradient(rgba(254, 217, 217, 0.781), rgba(132, 109, 195, 0.53), rgba(255, 255, 255, 0.804));
+}
+
+.transaction-table thead {
+  border: 2px solid black;
+}
+
+.transaction-table thead th {
+  padding: 10px;
+  text-transform: uppercase;
+  border: 2px solid black;
+}
+
+.transaction-table tbody td {
+  padding: 10px;
+  border: 2px solid black;
+}
+
+/* Table Row and Cell */
+.transaction-table td,
+.transaction-table tr {
+  min-width: 50px;
+  max-height: 50px;
+  text-align: center; /* Centers text in all cells */
+}
+
+/* Sold Status */
+.sold-status {
+  font-size: 20px;
+}
+
+/* Loading View */
+.loading-view {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center Alignment */
+.center {
+  text-align: center;
+}
+
+/* Empty View */
+.empty-view {
+  text-align: center;
+  font-family: 'Bree Serif', 'Times New Roman', Times, serif;
+  padding: 20px;
+}
+
+/* Pagination Container */
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 10px;
+}
+
+/* Pagination Buttons */
+.pagination-buttons button[type="button"] {
+  padding: 8px; /* Smaller for mobile */
+  background-color: transparent;
+  border: 2px solid #4fa94d00; 
+  outline: none;
+  cursor: pointer;
+  font-size: large;
+  font-weight: 600;
+  transition: all 0.3s ease; 
+  border-radius: 5px;
+}
+.pagination-buttons button[type="button"]:hover {
+  background-color: #512ce3; 
+  color: white; 
+  transform: scale(1); 
+  box-shadow: 1px 1px 3px black;
+}
+
+.pagination-buttons button[type="button"]:disabled {
+  cursor: not-allowed; 
+  opacity: 0.5; 
+}
+
+.pagination-buttons button[type="button"]:disabled:hover {
+  background-color: transparent; 
+  color: inherit; 
+  transform: none; 
+}
+
+/* Failure View */
+.failure-view {
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Retry Button */
+.retry-button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(27, 205, 0);
+  cursor: pointer;
+}
+
+/* Additional Styles (Optional) */
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5; 
+}
+
+/* --- Media Queries for Responsive Design --- */
+
+/* For Tablets (min-width: 768px) */
+@media (min-width: 768px) {
+  .dashboard-title {
+    font-size: 30px; /* Adjust title size for tablets */
+    padding: 12px;
+  }
+
+  .input-section {
+    flex-direction: row; /* Horizontal layout on larger screens */
+    padding: 15px;
+  }
+
+  .transaction-table {
+    font-size: 16px;
+  }
+
+  .pagination-buttons button[type="button"] {
+    padding: 10px;
+  }
+}
+
+/* For Desktops (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .dashboard-title {
+    font-size: 34px; /* Larger font size for desktop */
+  }
+
+  .input-section {
+    padding: 20px;
+  }
+
+  .transaction-table {
+    font-size: 18px;
+  }
+
+  .pagination-buttons button[type="button"] {
+    padding: 12px;
+  }
+}
+
+/* For Very Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .dashboard-title {
+    font-size: 20px; /* Smaller font for mobile */
+  }
+
+  .input-section {
+    flex-direction: column;
+  }
+
+  .search-input {
+    font-size: 14px; /* Smaller input font size */
+  }
+
+  .transaction-table {
+    font-size: 12px; /* Adjust table size for small screens */
+  }
+}
